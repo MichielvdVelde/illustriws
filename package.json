@@ -1,0 +1,32 @@
+{
+  "name": "illustriws",
+  "version": "0.0.1",
+  "description": "Middleware-enabled WebSocket upgrade",
+  "main": "./dist/index.js",
+  "author": "Michiel van der Velde <michiel@michielvdvelde.nl>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MichielvdVelde/illustriws.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=13"
+  },
+  "keywords": [
+    "http",
+    "upgrade",
+    "server",
+    "ws",
+    "websocket"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/ws": "^7.2.2"
+  },
+  "dependencies": {
+    "@art-of-coding/lime-compose": "0.0.6",
+    "ws": "^7.2.1"
+  }
+}
