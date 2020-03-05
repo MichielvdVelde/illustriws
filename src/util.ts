@@ -18,7 +18,7 @@ export function toResponse (
 
   return `HTTP/1.1 ${statusCode} ${STATUS_CODES[statusCode]}\r\n` +
     Object.keys(headers)
-      .map(key => `${key}: ${this.headers[key]}`)
+      .map(key => `${key}: ${headers[key]}`)
       .join('\r\n') +
     '\r\n\r\n' +
     message
