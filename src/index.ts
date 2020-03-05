@@ -7,7 +7,7 @@ import { Socket } from 'net'
 import WebSocket from 'ws'
 import { MiddlewareFunction, compose } from '@art-of-coding/lime-compose'
 
-import { toResponse } from './util'
+import { noopAsync, toResponse } from './util'
 import handleUpgrade from './middleware/handleUpgrade'
 
 // export the upgrade middleware function for manual access
@@ -32,10 +32,6 @@ export interface WebSocketContext<S = { [key: string]: any }> {
   wsServer: WebSocket.Server
   wsSocket: WebSocket,
   state: S
-}
-
-async function noopAsync () {
-  //
 }
 
 export default class WsUpgrade<T = { [key: string]: any }> extends EventEmitter {
