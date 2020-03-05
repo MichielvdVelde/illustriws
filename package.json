@@ -1,6 +1,6 @@
 {
   "name": "illustriws",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Middleware-enabled WebSocket upgrade",
   "main": "./dist/index.js",
   "author": "Michiel van der Velde <michiel@michielvdvelde.nl>",
