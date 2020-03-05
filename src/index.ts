@@ -29,6 +29,7 @@ export interface UpgradeContext<S = { [key: string]: any }> {
 }
 
 export interface WebSocketContext<S = { [key: string]: any }> {
+  req: IncomingMessage,
   wsServer: WebSocket.Server
   wsSocket: WebSocket,
   state: S
@@ -74,6 +75,7 @@ export default class Application<T = { [key: string]: any }> extends EventEmitte
         }
 
         const wsContext: WebSocketContext<T> = {
+          req: ctx.req,
           wsServer: this.wsServer,
           wsSocket: ctx.wsSocket,
           state: ctx.state
