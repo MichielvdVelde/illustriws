@@ -43,6 +43,7 @@ app.use(handleUpgrade())
 httpServer.on('upgrade', app.onUpgrade())
 
 app.on('connection', (ctx: WebSocketContext<State>) => {
+  // ctx.webSocket is the upgraded WebSocket instance
   console.log(`Welcome, ${ctx.state.playerId}!`)
 })
 
