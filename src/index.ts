@@ -95,6 +95,10 @@ export default class Application<T = { [key: string]: any }> extends EventEmitte
             ctx.wsSocket.terminate()
           }
 
+          if (ctx.wsSocket.listenerCount('error')) {
+            ctx.wsSocket.emit('error', new Error(e.message || message))
+          }
+
           return
         }
 
@@ -103,6 +107,10 @@ export default class Application<T = { [key: string]: any }> extends EventEmitte
           ctx.rawSocket.end(toResponse(statusCode, message))
         } else {
           ctx.rawSocket.destroy()
+        }
+
+        if (ctx.rawSocket.listenerCount('error')) {
+          ctx.rawSocket.emit('error', new Error(e.message || message))
         }
       }
     }
