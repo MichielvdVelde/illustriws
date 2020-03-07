@@ -1,7 +1,7 @@
 'use strict'
 
 import { EventEmitter } from 'events'
-import { IncomingMessage, STATUS_CODES } from 'http'
+import { Server, IncomingMessage, STATUS_CODES } from 'http'
 import { Socket } from 'net'
 
 import WebSocket from 'ws'
@@ -53,6 +53,12 @@ export default class Application<T = { [key: string]: any }> extends EventEmitte
     for (const middleware of middlewares) {
       this.middlewares.push(middleware)
     }
+  }
+
+  public listen (...args: any[]) {
+    const server = new Server()
+    server.on('upgrade', this.onUpgrade())
+    return server.listen(...args)
   }
 
   public onUpgrade () {
