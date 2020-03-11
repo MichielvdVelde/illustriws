@@ -38,7 +38,7 @@ export interface WebSocketContext<S = { [key: string]: any }> {
 export default class Application<T = { [key: string]: any }> extends EventEmitter {
   public readonly wsServer: WebSocket.Server
 
-  protected middlewares: MiddlewareFunction<UpgradeContext<T>>[]
+  protected middlewares: MiddlewareFunction<UpgradeContext<T>>[] = []
 
   public constructor (opts: WsOptions = {}) {
     super()
