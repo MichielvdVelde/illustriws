@@ -23,10 +23,10 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@types/ws": "^7.2.2"
+    "@types/ws": "^7.2.3"
   },
   "dependencies": {
     "@art-of-coding/lime-compose": "0.0.6",
-    "ws": "^7.2.1"
+    "ws": "^7.2.3"
   }
 }
