@@ -1,5 +1,7 @@
 # Illustriws
 
+> Illustriws wil be succeeded by [Signal-Fire2](https://github.com/MichielvdVelde/signal-fire2)!
+
 Middleware-enabled WebSocket upgrade.
 
 * Supports middleware functions for the HTTP(S) server's `Upgrade` event
