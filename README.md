@@ -1,6 +1,6 @@
 # Illustriws
 
-> Illustriws wil be succeeded by [Signal-Fire2](https://github.com/MichielvdVelde/signal-fire2)!
+**Deprecated**. Use [@lucets/luce](https://github.com/lucets/luce) instead.
 
 Middleware-enabled WebSocket upgrade.
 
